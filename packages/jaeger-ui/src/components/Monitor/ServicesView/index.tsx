@@ -143,7 +143,7 @@ const convertServiceErrorRateToPercentages = (serviceErrorRate: null | ServiceMe
 // export for tests
 export class MonitorATMServicesViewImpl extends React.PureComponent<TProps, StateType> {
   docsLink: string;
-  graphDivWrapper: React.RefObject<HTMLInputElement>;
+  graphDivWrapper: React.RefObject<HTMLInputElement | null>;
   serviceSelectorValue = '';
   endTime: number = Date.now();
   state: StateType = {

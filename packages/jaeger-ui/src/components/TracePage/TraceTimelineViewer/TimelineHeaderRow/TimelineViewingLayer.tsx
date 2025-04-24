@@ -122,7 +122,7 @@ function getMarkers(
  */
 export default class TimelineViewingLayer extends React.PureComponent<TimelineViewingLayerProps> {
   _draggerReframe: DraggableManager;
-  _root: React.RefObject<HTMLDivElement>;
+  _root: React.RefObject<HTMLDivElement | null>;
 
   constructor(props: TimelineViewingLayerProps) {
     super(props);

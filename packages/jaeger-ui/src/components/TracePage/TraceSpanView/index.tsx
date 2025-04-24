@@ -53,8 +53,8 @@ type State = {
 };
 
 export default class TraceSpanView extends Component<Props, State> {
-  constructor(props: Props, state: State) {
-    super(props, state);
+  constructor(props: Props) {
+    super(props);
     const serviceNamesList = new Set<string>();
     const operationNamesList = new Set<string>();
     const serviceNameOperationsMap = new Map<string, string[]>();

@@ -46,7 +46,7 @@ type TProps = {
   visEncoding?: string;
 };
 export default class Header extends React.PureComponent<TProps> {
-  private _uiFindInput: React.RefObject<InputRef> = React.createRef();
+  private _uiFindInput: React.RefObject<InputRef | null> = React.createRef();
 
   static defaultProps = {
     showParameters: true,

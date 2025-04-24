@@ -111,7 +111,7 @@ export default class Digraph<T = unknown, U = unknown> extends React.PureCompone
     return (name: string) => `${classNamePrefix} ${classNamePrefix}-Digraph--${name}`;
   });
 
-  rootRef: React.RefObject<HTMLDivElement> = React.createRef();
+  rootRef: React.RefObject<HTMLDivElement | null> = React.createRef();
 
   zoomManager: ZoomManager | null = null;
 

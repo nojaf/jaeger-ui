@@ -31,7 +31,7 @@ function getTitle(value: string) {
 }
 
 export default class TimelineCollapser extends React.PureComponent<CollapserProps> {
-  containerRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
 
   constructor(props: CollapserProps) {
     super(props);

@@ -57,8 +57,8 @@ const isErrorTag = ({ key, value }: KeyValuePair<boolean | string>) =>
 const trackTraceConversions = () => trackConversions(EAltViewActions.Traces);
 
 export default class ResultItem extends React.PureComponent<Props, State> {
-  constructor(props: Props, state: State) {
-    super(props, state);
+  constructor(props: Props) {
+    super(props);
     const { startTime, spans } = props.trace;
 
     const startTimeDayjs = dayjs(startTime / 1000);

@@ -133,7 +133,7 @@ export class TracePageImpl extends React.PureComponent<TProps, TState> {
 
   _headerElm: HTMLElement | TNil;
   _filterSpans: typeof filterSpans;
-  _searchBar: React.RefObject<InputRef>;
+  _searchBar: React.RefObject<InputRef | null>;
   _scrollManager: ScrollManager;
   traceDagEV: TEv | TNil;
 

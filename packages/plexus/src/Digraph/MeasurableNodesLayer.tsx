@@ -44,9 +44,9 @@ type TState<T> = {
 };
 
 function createRefs<T>(length: number) {
-  const rv: React.RefObject<T>[] = [];
+  const rv: React.RefObject<MeasurableNode<T>>[] = [];
   for (let i = 0; i < length; i++) {
-    rv.push(React.createRef<T>());
+    rv.push(React.createRef() as React.RefObject<MeasurableNode<T>>);
   }
   return rv;
 }
@@ -63,7 +63,7 @@ export default class MeasurableNodesLayer<T = {}, U = {}> extends React.PureComp
     }
     return {
       vertices,
-      nodeRefs: createRefs<MeasurableNode<T>>(vertices.length),
+      nodeRefs: createRefs<T>(vertices.length),
     };
   }
 
@@ -73,7 +73,7 @@ export default class MeasurableNodesLayer<T = {}, U = {}> extends React.PureComp
     const { vertices } = graphState;
     this.state = {
       vertices,
-      nodeRefs: createRefs<MeasurableNode<T>>(vertices.length),
+      nodeRefs: createRefs<T>(vertices.length),
     };
   }
 

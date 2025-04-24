@@ -47,7 +47,7 @@ type TState = {
 export const DEFAULT_PLACEHOLDER = 'Select a value…';
 
 export default class NameSelector extends React.PureComponent<TProps, TState> {
-  listRef: React.RefObject<FilteredList> = React.createRef();
+  listRef: React.RefObject<FilteredList | null> = React.createRef();
   state: TState = { popoverVisible: false };
 
   componentDidUpdate() {
